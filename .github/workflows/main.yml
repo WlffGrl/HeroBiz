@@ -10,10 +10,10 @@ jobs:
     steps:
       - name: menampilkan teks
         run: echo "ini step build"
-        needs: build
   testing:
     name: test-apps
     runs-on: ubuntu-latest
+    needs: build
     steps:
       - name: menampilkan teks
         run: echo "ini step test"
